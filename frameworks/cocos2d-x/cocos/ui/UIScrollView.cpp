@@ -965,6 +965,10 @@ void ScrollView::onTouchEnded(Touch *touch, Event *unusedEvent)
         handleReleaseLogic(touch);
     }
     _isInterceptTouch = false;
+    //FYD 如果点击结束之后,没有自动移动
+    if(!_autoScrolling){
+        dispatchEvent(SCROLLVIEW_EVENT_NO_AUTOSCROLL, EventType::NO_AUTOSCROLL);
+    }
 }
 
 void ScrollView::onTouchCancelled(Touch *touch, Event *unusedEvent)
@@ -975,6 +979,10 @@ void ScrollView::onTouchCancelled(Touch *touch, Event *unusedEvent)
         handleReleaseLogic(touch);
     }
     _isInterceptTouch = false;
+    //FYD 如果点击结束之后,没有自动移动
+    if(!_autoScrolling){
+        dispatchEvent(SCROLLVIEW_EVENT_NO_AUTOSCROLL, EventType::NO_AUTOSCROLL);
+    }
 }
 
 void ScrollView::update(float dt)

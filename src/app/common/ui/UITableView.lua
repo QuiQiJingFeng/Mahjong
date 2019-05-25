@@ -40,7 +40,8 @@ function UITableView:initWithCellTemplate(cellTemplate)
     self:addScrollViewEventListener(function(sender, eventType) 
         if eventType ==  ccui.ScrollviewEventType.containerMoved then
             self:update()
-        elseif eventType == ccui.ScrollviewEventType.autoscrollEnded then
+        elseif eventType == ccui.ScrollviewEventType.autoscrollEnded or 
+               eventType == ccui.ScrollviewEventType.no_autoscroll then
             if self._scrollItemToCenter then
                 self:scrollItemToCenter()
             end

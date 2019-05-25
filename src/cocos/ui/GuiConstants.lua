@@ -154,6 +154,7 @@ ccui.ScrollviewEventType = {
     bounceRight = 8,
     containerMoved = 9,
     autoscrollEnded = 10,
+    no_autoscroll = 11,
 }
 
 ccui.ListViewDirection = {
