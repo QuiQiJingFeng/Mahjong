@@ -1,0 +1,34 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cocos2-launch",
+            "type": "lua",
+            "request": "launch",
+            "runtimeType": "Cocos2",
+            "localRoot": "/${workspaceRoot}/",
+            "commandLine": "-workdir ${workspaceRoot}",
+            "port": 7003,
+            "exePath": "${workspaceRoot}/runtime/mac/mahjong-desktop.app/Contents/MacOS/mahjong-desktop",
+            "printType": 1
+        },
+        {
+            "name": "COCOS(remote debugging)",
+            "type": "lua",
+            "request": "attach",
+            "runtimeType": "Cocos2",
+            "localRoot": "${workspaceRoot}",
+            "port": 7003,
+            "printType": 2
+        },
+        {
+            "name": "Unity-ulua",
+            "type": "lua",
+            "request": "attach",
+            "runtimeType": "Unity",
+            "localRoot": "${workspaceRoot}",
+            "port": 7003,
+            "printType": 1
+        }
+    ]
+}
